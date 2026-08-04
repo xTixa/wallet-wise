@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(disown)",
+      "Read(//tmp/**)",
+      "Bash(command -v chromium-cli)",
+      "Read(//c/Users/patri/.claude/**)",
+      "Read(//c/Users/patri/AppData/Local/Temp/claude/bundled-skills/**)",
+      "Bash(curl -s http://localhost:5175/login)",
+      "Bash(curl -s http://localhost:5175/recuperar-password)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5175/src/main.jsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5175/src/App.jsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/Login.jsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/RecoverPassword.jsx)",
+      "Bash(curl -s -o /dev/null -w \"index.css: %{http_code}\\\\n\" http://localhost:5175/src/index.css)",
+      "Bash(curl -s -o /dev/null -w \"Login.jsx: %{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/Login.jsx)",
+      "Bash(curl -s -o /dev/null -w \"RecoverPassword.jsx: %{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/RecoverPassword.jsx)",
+      "Bash(curl -s http://localhost:5175/src/index.css)",
+      "Bash(curl -s -o /dev/null -w \"fraunces 500 normal woff2: %{http_code}\\\\n\" \"http://localhost:5175/node_modules/@fontsource/fraunces/files/fraunces-latin-500-normal.woff2\")",
+      "Bash(curl -s -o /dev/null -w \"AuthLayout.jsx: %{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/AuthLayout.jsx)",
+      "Bash(curl -s -o /dev/null -w \"App.jsx: %{http_code}\\\\n\" http://localhost:5175/src/App.jsx)",
+      "Bash(curl -s -o /dev/null -w \"Register.jsx: %{http_code}\\\\n\" http://localhost:5175/src/pages/Auth/Register.jsx)",
+      "Bash(curl -s -o /dev/null -w \"/registar route: %{http_code}\\\\n\" http://localhost:5175/registar)"
+    ]
+  }
+}
