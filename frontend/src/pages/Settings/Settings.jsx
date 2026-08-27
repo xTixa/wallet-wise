@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import PageShell from '../../components/PageShell.jsx'
 import { getMe, updateMe } from '../../lib/user.js'
+import { applyTheme } from '../../lib/theme.js'
 
 const THEMES = [
   { value: 'system', label: 'Sistema' },
@@ -69,7 +70,10 @@ function Settings() {
 
     getMe()
       .then((data) => {
-        if (!cancelled) setSettings(data)
+        if (!cancelled) {
+          setSettings(data)
+          applyTheme(data.theme)
+        }
       })
       .catch(() => {
         if (!cancelled) setError('Não foi possível carregar as definições.')
@@ -89,6 +93,7 @@ function Settings() {
     setSettings(next)
     setError('')
     setSavedMessage('')
+    if (patch.theme) applyTheme(patch.theme)
     try {
       const updated = await updateMe(patch)
       setSettings(updated)
@@ -96,6 +101,7 @@ function Settings() {
       setTimeout(() => setSavedMessage(''), 2000)
     } catch {
       setSettings(previous)
+      if (patch.theme) applyTheme(previous.theme)
       setError('Não foi possível guardar a alteração.')
     }
   }
@@ -129,7 +135,7 @@ function Settings() {
               id="settings-theme"
               value={settings.theme}
               onChange={(event) => persist({ theme: event.target.value })}
-              className="w-full max-w-xs rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+              className="w-full max-w-xs rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
             >
               {THEMES.map((theme) => (
                 <option key={theme.value} value={theme.value}>
@@ -152,7 +158,7 @@ function Settings() {
                 id="settings-language"
                 value={settings.language}
                 onChange={(event) => persist({ language: event.target.value })}
-                className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+                className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
               >
                 {LANGUAGES.map((lang) => (
                   <option key={lang.value} value={lang.value}>
@@ -170,7 +176,7 @@ function Settings() {
                 id="settings-currency"
                 value={settings.currency}
                 onChange={(event) => persist({ currency: event.target.value })}
-                className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+                className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
               >
                 {CURRENCIES.map((currency) => (
                   <option key={currency.value} value={currency.value}>

@@ -7,7 +7,7 @@ const highlights = [
 function AuthLayout({ headline, tagline, children }) {
   return (
     <div className="grid min-h-svh lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-      <aside className="relative hidden flex-col justify-between overflow-hidden bg-[var(--ink)] px-14 py-12 text-[#f6f4ee] lg:flex">
+      <aside className="relative hidden flex-col justify-between overflow-hidden bg-[var(--sidebar-bg)] px-14 py-12 text-[#f6f4ee] lg:flex">
         <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
           <svg width="100%" height="100%" preserveAspectRatio="none">
             <defs>

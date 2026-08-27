@@ -85,7 +85,7 @@ function TransactionForm({ type, categories, accounts, onCreated }) {
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             placeholder="Ex: Supermercado"
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -101,7 +101,7 @@ function TransactionForm({ type, categories, accounts, onCreated }) {
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
             placeholder="0.00"
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -113,7 +113,7 @@ function TransactionForm({ type, categories, accounts, onCreated }) {
             id="tx-category"
             value={categoryId}
             onChange={(event) => setCategoryId(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           >
             <option value="">Escolhe…</option>
             {categories.map((category) => (
@@ -133,7 +133,7 @@ function TransactionForm({ type, categories, accounts, onCreated }) {
             type="date"
             value={date}
             onChange={(event) => setDate(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -145,7 +145,7 @@ function TransactionForm({ type, categories, accounts, onCreated }) {
             id="tx-payment"
             value={paymentMethod}
             onChange={(event) => setPaymentMethod(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           >
             {PAYMENT_METHODS.map((method) => (
               <option key={method.value} value={method.value}>

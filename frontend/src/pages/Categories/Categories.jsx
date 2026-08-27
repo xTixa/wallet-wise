@@ -44,7 +44,7 @@ function CategoryForm({ onCreated }) {
           value={name}
           onChange={(event) => setName(event.target.value)}
           placeholder="Ex: Alimentação"
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         />
       </div>
 
@@ -56,7 +56,7 @@ function CategoryForm({ onCreated }) {
           id="cat-type"
           value={type}
           onChange={(event) => setType(event.target.value)}
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         >
           <option value="EXPENSE">Despesa</option>
           <option value="INCOME">Receita</option>
@@ -72,7 +72,7 @@ function CategoryForm({ onCreated }) {
           type="color"
           value={color}
           onChange={(event) => setColor(event.target.value)}
-          className="h-[42px] w-[52px] cursor-pointer rounded-lg border border-[var(--border)] bg-white p-1"
+          className="h-[42px] w-[52px] cursor-pointer rounded-lg border border-[var(--border)] bg-[var(--surface)] p-1"
         />
       </div>
 

@@ -60,7 +60,7 @@ function GoalForm({ onCreated }) {
           value={title}
           onChange={(event) => setTitle(event.target.value)}
           placeholder="Ex: Fundo de emergência"
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         />
       </div>
 
@@ -76,7 +76,7 @@ function GoalForm({ onCreated }) {
           value={targetAmount}
           onChange={(event) => setTargetAmount(event.target.value)}
           placeholder="1000.00"
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         />
       </div>
 
@@ -89,7 +89,7 @@ function GoalForm({ onCreated }) {
           type="date"
           value={deadline}
           onChange={(event) => setDeadline(event.target.value)}
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         />
       </div>
 
@@ -176,7 +176,7 @@ function GoalCard({ goal, onContribute, onDelete }) {
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
             placeholder="Valor a adicionar"
-            className="flex-1 rounded-lg border border-[var(--border)] bg-white px-3.5 py-2 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="flex-1 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
           <button
             type="submit"

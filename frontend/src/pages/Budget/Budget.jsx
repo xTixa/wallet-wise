@@ -75,7 +75,7 @@ function BudgetForm({ categories, hasExpenseCategories, month, year, onCreated }
           id="budget-category"
           value={categoryId}
           onChange={(event) => setCategoryId(event.target.value)}
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         >
           <option value="">Escolhe…</option>
           {categories.map((category) => (
@@ -98,7 +98,7 @@ function BudgetForm({ categories, hasExpenseCategories, month, year, onCreated }
           value={limitAmount}
           onChange={(event) => setLimitAmount(event.target.value)}
           placeholder="300.00"
-          className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
         />
       </div>
 

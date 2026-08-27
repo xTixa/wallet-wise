@@ -37,7 +37,7 @@ async function register(req, res) {
 
   res.status(201).json({
     token,
-    user: { id: user.id, name: user.name, email: user.email },
+    user: { id: user.id, name: user.name, email: user.email, theme: user.theme },
   });
 }
 
@@ -62,7 +62,7 @@ async function login(req, res) {
 
   res.json({
     token,
-    user: { id: user.id, name: user.name, email: user.email },
+    user: { id: user.id, name: user.name, email: user.email, theme: user.theme },
   });
 }
 

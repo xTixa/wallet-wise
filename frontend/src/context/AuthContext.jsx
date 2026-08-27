@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import api from '../lib/api.js'
 import { AuthContext } from './auth-context.js'
+import { applyTheme } from '../lib/theme.js'
 
 function readStoredUser() {
   const raw = localStorage.getItem('ww_user')
@@ -21,6 +22,7 @@ export function AuthProvider({ children }) {
     localStorage.setItem('ww_user', JSON.stringify(data.user))
     setToken(data.token)
     setUser(data.user)
+    applyTheme(data.user.theme)
   }
 
   async function login(email, password) {
@@ -42,8 +44,19 @@ export function AuthProvider({ children }) {
     setUser(null)
   }
 
+  function updateUser(patch) {
+    setUser((current) => {
+      if (!current) return current
+      const next = { ...current, ...patch }
+      localStorage.setItem('ww_user', JSON.stringify(next))
+      return next
+    })
+  }
+
   return (
-    <AuthContext.Provider value={{ user, token, login, register, logout, isAuthenticated: !!token }}>
+    <AuthContext.Provider
+      value={{ user, token, login, register, logout, updateUser, isAuthenticated: !!token }}
+    >
       {children}
     </AuthContext.Provider>
   )

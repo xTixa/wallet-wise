@@ -97,7 +97,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             placeholder="Ex: Renda"
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -113,7 +113,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
             placeholder="0.00"
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors placeholder:text-[var(--text)]/50 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -125,7 +125,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             id="rec-category"
             value={categoryId}
             onChange={(event) => setCategoryId(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           >
             <option value="">Escolhe…</option>
             {categories.map((category) => (
@@ -144,7 +144,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             id="rec-frequency"
             value={frequency}
             onChange={(event) => setFrequency(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           >
             {FREQUENCIES.map((freq) => (
               <option key={freq.value} value={freq.value}>
@@ -163,7 +163,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             type="date"
             value={nextDueDate}
             onChange={(event) => setNextDueDate(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           />
         </div>
 
@@ -175,7 +175,7 @@ function RecurringForm({ categories, accounts, onCreated }) {
             id="rec-payment"
             value={paymentMethod}
             onChange={(event) => setPaymentMethod(event.target.value)}
-            className="rounded-lg border border-[var(--border)] bg-white px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
+            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3.5 py-2.5 text-[15px] text-[var(--text-h)] outline-none transition-colors focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-bg)]"
           >
             {PAYMENT_METHODS.map((method) => (
               <option key={method.value} value={method.value}>

@@ -42,7 +42,7 @@ function AppLayout() {
 
   return (
     <div className="flex min-h-svh bg-[var(--bg)]">
-      <aside className="hidden w-64 shrink-0 flex-col justify-between bg-[var(--ink)] px-5 py-8 text-[#f6f4ee] lg:flex">
+      <aside className="hidden w-64 shrink-0 flex-col justify-between bg-[var(--sidebar-bg)] px-5 py-8 text-[#f6f4ee] lg:flex">
         <div className="flex flex-col gap-10">
           <p
             className="px-2 text-xl italic tracking-tight"
