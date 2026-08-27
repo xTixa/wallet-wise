@@ -13,7 +13,13 @@ const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = process.env.CORS_ORIGIN?.split(",").map((origin) => origin.trim());
+
+app.use(
+  cors({
+    origin: allowedOrigins ?? true,
+  }),
+);
 app.use(express.json());
 
 app.get("/health", (req, res) => {
