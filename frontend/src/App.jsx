@@ -5,6 +5,7 @@ import GuestRoute from './components/GuestRoute.jsx'
 import Login from './pages/Auth/Login.jsx'
 import Register from './pages/Auth/Register.jsx'
 import RecoverPassword from './pages/Auth/RecoverPassword.jsx'
+import ResetPassword from './pages/Auth/ResetPassword.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import Revenues from './pages/Management/Revenues/Revenues.jsx'
 import Expenses from './pages/Management/Expenses/Expenses.jsx'
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registar" element={<Register />} />
         <Route path="/recuperar-password" element={<RecoverPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
       </Route>
 
       <Route element={<ProtectedRoute />}>

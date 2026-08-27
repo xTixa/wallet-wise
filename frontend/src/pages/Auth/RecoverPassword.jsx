@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AuthLayout from './AuthLayout.jsx'
+import { requestPasswordReset } from '../../lib/passwordReset.js'
 
 function RecoverPassword() {
   const [email, setEmail] = useState('')
@@ -14,8 +15,7 @@ function RecoverPassword() {
     setIsSubmitting(true)
 
     try {
-      // TODO: integrate with POST /auth/recover-password once the API is available
-      console.log('recover password', { email })
+      await requestPasswordReset(email)
       setIsSubmitted(true)
     } catch {
       setError('Não foi possível enviar o email de recuperação. Tenta novamente.')

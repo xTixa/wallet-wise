@@ -10,6 +10,7 @@ const goalsRoutes = require("./routes/goalsRoutes");
 const budgetsRoutes = require("./routes/budgetsRoutes");
 const recurringExpensesRoutes = require("./routes/recurringExpensesRoutes");
 const userRoutes = require("./routes/userRoutes");
+const passwordResetRoutes = require("./routes/passwordResetRoutes");
 
 const app = express();
 
@@ -34,5 +35,6 @@ app.use("/api/goals", goalsRoutes);
 app.use("/api/budgets", budgetsRoutes);
 app.use("/api/recurring-expenses", recurringExpensesRoutes);
 app.use("/api/me", userRoutes);
+app.use("/api/password-reset", passwordResetRoutes);
 
 module.exports = app;
