@@ -1,8 +1,9 @@
-import PageShell from '../../../components/PageShell.jsx'
+import TransactionsPage from '../TransactionsPage.jsx'
 
 function Expenses() {
   return (
-    <PageShell
+    <TransactionsPage
+      type="EXPENSE"
       title="Despesas"
       description="Regista e acompanha os teus gastos por categoria e comerciante."
     />

@@ -1,8 +1,9 @@
-import PageShell from '../../../components/PageShell.jsx'
+import TransactionsPage from '../TransactionsPage.jsx'
 
 function Revenues() {
   return (
-    <PageShell
+    <TransactionsPage
+      type="INCOME"
       title="Receitas"
       description="Adiciona, edita e organiza as tuas fontes de rendimento."
     />

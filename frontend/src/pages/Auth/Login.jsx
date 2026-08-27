@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AuthLayout from './AuthLayout.jsx'
+import { useAuth } from '../../context/useAuth.js'
 
 function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const { login } = useAuth()
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -14,10 +17,10 @@ function Login() {
     setIsSubmitting(true)
 
     try {
-      // TODO: integrate with POST /auth/login once the API is available
-      console.log('login', { email, password })
-    } catch {
-      setError('Não foi possível iniciar sessão. Verifica as tuas credenciais.')
+      await login(email, password)
+      navigate('/dashboard', { replace: true })
+    } catch (err) {
+      setError(err.response?.data?.error ?? 'Não foi possível iniciar sessão. Verifica as tuas credenciais.')
     } finally {
       setIsSubmitting(false)
     }

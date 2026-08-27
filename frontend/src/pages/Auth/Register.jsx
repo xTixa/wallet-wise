@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AuthLayout from './AuthLayout.jsx'
+import { useAuth } from '../../context/useAuth.js'
 
 function Register() {
   const [name, setName] = useState('')
@@ -9,6 +10,8 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [error, setError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const { register } = useAuth()
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -27,10 +30,10 @@ function Register() {
     setIsSubmitting(true)
 
     try {
-      // TODO: integrate with POST /auth/register once the API is available
-      console.log('register', { name, email, password })
-    } catch {
-      setError('Não foi possível criar a conta. Tenta novamente.')
+      await register(name, email, password)
+      navigate('/dashboard', { replace: true })
+    } catch (err) {
+      setError(err.response?.data?.error ?? 'Não foi possível criar a conta. Tenta novamente.')
     } finally {
       setIsSubmitting(false)
     }

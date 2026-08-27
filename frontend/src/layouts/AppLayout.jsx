@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/useAuth.js'
 
 const navGroups = [
   {
@@ -29,6 +30,16 @@ const navGroups = [
 ]
 
 function AppLayout() {
+  const { user, logout } = useAuth()
+  const navigate = useNavigate()
+
+  const initial = user?.name?.trim()?.[0]?.toUpperCase() ?? '?'
+
+  function handleLogout() {
+    logout()
+    navigate('/login', { replace: true })
+  }
+
   return (
     <div className="flex min-h-svh bg-[var(--bg)]">
       <aside className="hidden w-64 shrink-0 flex-col justify-between bg-[var(--ink)] px-5 py-8 text-[#f6f4ee] lg:flex">
@@ -66,18 +77,39 @@ function AppLayout() {
           </nav>
         </div>
 
-        <NavLink
-          to="/perfil"
-          className={({ isActive }) =>
-            `rounded-lg px-2.5 py-2 text-sm font-medium transition-colors ${
-              isActive
-                ? 'bg-white/10 text-white'
-                : 'text-[#cbd5c4] hover:bg-white/5 hover:text-white'
-            }`
-          }
-        >
-          Perfil
-        </NavLink>
+        <div className="flex flex-col gap-1.5">
+          <NavLink
+            to="/perfil"
+            className={({ isActive }) =>
+              `rounded-lg px-2.5 py-2 text-sm font-medium transition-colors ${
+                isActive
+                  ? 'bg-white/10 text-white'
+                  : 'text-[#cbd5c4] hover:bg-white/5 hover:text-white'
+              }`
+            }
+          >
+            Perfil
+          </NavLink>
+          <NavLink
+            to="/definicoes"
+            className={({ isActive }) =>
+              `rounded-lg px-2.5 py-2 text-sm font-medium transition-colors ${
+                isActive
+                  ? 'bg-white/10 text-white'
+                  : 'text-[#cbd5c4] hover:bg-white/5 hover:text-white'
+              }`
+            }
+          >
+            Definições
+          </NavLink>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="rounded-lg px-2.5 py-2 text-left text-sm font-medium text-[#cbd5c4] transition-colors hover:bg-white/5 hover:text-white"
+          >
+            Terminar sessão
+          </button>
+        </div>
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
@@ -93,7 +125,7 @@ function AppLayout() {
             to="/perfil"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--accent-bg)] text-sm font-medium text-[var(--accent)]"
           >
-            P
+            {initial}
           </NavLink>
         </header>
 

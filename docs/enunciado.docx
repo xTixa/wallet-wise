@@ -1,0 +1,546 @@
+# WalletWise
+
+## Sistema Inteligente de Gestão Financeira Pessoal
+
+**Versão:** 1.0
+**Autor:** Patricia Oliveira
+
+---
+
+# 1. Introdução
+
+## 1.1 Enquadramento
+
+A gestão eficiente das finanças pessoais é uma necessidade crescente na sociedade atual. Apesar da existência de inúmeras aplicações financeiras, muitas apresentam interfaces complexas, funcionalidades limitadas ou exigem integrações com instituições bancárias, levantando preocupações relacionadas com privacidade e segurança.
+
+O **WalletWise** surge como uma plataforma web de gestão financeira pessoal que pretende fornecer aos utilizadores uma visão clara, organizada e inteligente da sua situação financeira, permitindo-lhes acompanhar receitas, despesas, orçamentos e objetivos financeiros de forma intuitiva.
+
+Para além das funcionalidades tradicionais de registo financeiro, o sistema irá incorporar ferramentas de análise estatística, previsões de gastos e mecanismos de Inteligência Artificial capazes de auxiliar o utilizador na tomada de decisões financeiras.
+
+---
+
+## 1.2 Objetivos
+
+O principal objetivo do projeto consiste no desenvolvimento de uma aplicação web que permita aos utilizadores controlar as suas finanças pessoais através de uma plataforma moderna, segura e intuitiva.
+
+Pretende-se que a aplicação seja capaz de:
+
+* centralizar toda a informação financeira do utilizador;
+* organizar receitas e despesas;
+* acompanhar a evolução financeira ao longo do tempo;
+* definir objetivos de poupança;
+* controlar orçamentos mensais;
+* apresentar indicadores estatísticos relevantes;
+* fornecer recomendações inteligentes baseadas nos hábitos financeiros do utilizador;
+* disponibilizar uma experiência moderna, responsiva e agradável.
+
+---
+
+## 1.3 Público-Alvo
+
+A plataforma destina-se a qualquer utilizador que pretenda gerir melhor as suas finanças pessoais, nomeadamente:
+
+* estudantes universitários;
+* jovens trabalhadores;
+* freelancers;
+* trabalhadores independentes;
+* famílias;
+* pequenos empreendedores;
+* qualquer pessoa interessada em melhorar os seus hábitos financeiros.
+
+---
+
+# 2. Objetivos do Sistema
+
+A aplicação deverá permitir:
+
+* gerir múltiplas contas financeiras;
+* registar receitas;
+* registar despesas;
+* categorizar automaticamente movimentos;
+* acompanhar saldos;
+* definir limites de gastos;
+* gerir objetivos de poupança;
+* analisar hábitos financeiros;
+* visualizar indicadores estatísticos;
+* receber notificações e recomendações.
+
+---
+
+# 3. Requisitos Funcionais
+
+## RF01 – Gestão de Utilizadores
+
+O sistema deverá permitir:
+
+* criar conta;
+* autenticar utilizadores;
+* terminar sessão;
+* recuperar palavra-passe;
+* editar perfil;
+* alterar palavra-passe;
+* configurar preferências da aplicação.
+
+Cada utilizador possuirá:
+
+* nome;
+* email;
+* fotografia de perfil;
+* idioma;
+* moeda principal;
+* tema da aplicação.
+
+---
+
+## RF02 – Gestão de Contas Financeiras
+
+Um utilizador poderá possuir várias contas financeiras.
+
+Exemplos:
+
+* Conta Bancária
+* Carteira
+* Conta Poupança
+* Cartão de Crédito
+
+Cada conta deverá possuir:
+
+* nome;
+* tipo;
+* saldo inicial;
+* cor personalizada;
+* ícone;
+* estado (ativa ou arquivada).
+
+A aplicação deverá calcular automaticamente o saldo atual com base nas transações registadas.
+
+---
+
+## RF03 – Gestão de Categorias
+
+O sistema deverá disponibilizar categorias predefinidas.
+
+Exemplos:
+
+Receitas
+
+* Salário
+* Bolsa
+* Reembolso
+* Prémios
+* Investimentos
+
+Despesas
+
+* Alimentação
+* Casa
+* Saúde
+* Educação
+* Tecnologia
+* Lazer
+* Transportes
+* Compras
+* Viagens
+
+O utilizador deverá poder:
+
+* criar categorias;
+* editar categorias;
+* eliminar categorias;
+* personalizar ícones;
+* personalizar cores.
+
+---
+
+## RF04 – Gestão de Receitas
+
+O sistema deverá permitir:
+
+* adicionar receitas;
+* editar receitas;
+* eliminar receitas;
+* pesquisar receitas;
+* filtrar receitas;
+* ordenar receitas.
+
+Cada receita deverá conter:
+
+* título;
+* descrição;
+* valor;
+* categoria;
+* conta;
+* data;
+* observações.
+
+---
+
+## RF05 – Gestão de Despesas
+
+O sistema deverá permitir:
+
+* adicionar despesas;
+* editar despesas;
+* eliminar despesas;
+* duplicar despesas;
+* anexar comprovativos;
+* pesquisar despesas;
+* filtrar despesas;
+* ordenar despesas.
+
+Cada despesa deverá conter:
+
+* título;
+* descrição;
+* valor;
+* categoria;
+* conta;
+* comerciante;
+* método de pagamento;
+* localização;
+* data;
+* observações.
+
+---
+
+## RF06 – Dashboard Financeiro
+
+O dashboard deverá apresentar um resumo financeiro completo.
+
+Indicadores principais:
+
+* saldo total;
+* receitas do mês;
+* despesas do mês;
+* poupança mensal;
+* saldo disponível;
+* orçamento utilizado;
+* objetivos em progresso;
+* últimas transações.
+
+---
+
+## RF07 – Orçamentos
+
+O sistema deverá permitir criar orçamentos mensais.
+
+Cada orçamento poderá ser:
+
+* global;
+* específico de uma categoria.
+
+O sistema deverá:
+
+* calcular automaticamente a percentagem utilizada;
+* emitir alertas quando forem atingidos determinados limites;
+* indicar o valor restante disponível.
+
+---
+
+## RF08 – Objetivos Financeiros
+
+O utilizador poderá criar objetivos de poupança.
+
+Exemplos:
+
+* Comprar computador;
+* Comprar automóvel;
+* Viagem;
+* Fundo de emergência.
+
+Cada objetivo deverá possuir:
+
+* título;
+* descrição;
+* valor pretendido;
+* data limite;
+* cor;
+* ícone;
+* estado.
+
+O sistema deverá calcular automaticamente:
+
+* progresso;
+* percentagem concluída;
+* valor restante.
+
+---
+
+## RF09 – Pesquisa
+
+A aplicação deverá permitir pesquisar movimentos financeiros através de:
+
+* descrição;
+* comerciante;
+* categoria;
+* intervalo de datas;
+* intervalo de valores;
+* método de pagamento.
+
+---
+
+## RF10 – Filtros
+
+O sistema deverá disponibilizar filtros por:
+
+* receitas;
+* despesas;
+* categoria;
+* conta;
+* comerciante;
+* período temporal;
+* método de pagamento.
+
+---
+
+## RF11 – Estatísticas
+
+O sistema deverá gerar automaticamente indicadores estatísticos.
+
+Entre eles:
+
+* despesas por categoria;
+* receitas por categoria;
+* evolução mensal;
+* evolução anual;
+* distribuição por método de pagamento;
+* comerciantes onde mais dinheiro foi gasto;
+* evolução do saldo.
+
+---
+
+## RF12 – Gráficos
+
+A aplicação deverá apresentar gráficos interativos.
+
+Exemplos:
+
+* gráfico circular das categorias;
+* gráfico de barras mensal;
+* gráfico temporal do saldo;
+* gráfico comparativo entre receitas e despesas.
+
+---
+
+## RF13 – Responsividade
+
+A aplicação deverá adaptar-se automaticamente a:
+
+* desktop;
+* tablet;
+* smartphone.
+
+---
+
+# 4. Funcionalidades Inteligentes (Versão 2)
+
+## OCR de Faturas
+
+O utilizador poderá fotografar ou carregar uma imagem de um recibo.
+
+O sistema deverá reconhecer automaticamente:
+
+* comerciante;
+* data;
+* valor total;
+* IVA;
+* número da fatura.
+
+Posteriormente, a aplicação preencherá automaticamente o formulário da despesa.
+
+---
+
+## Classificação Automática
+
+Após identificar o comerciante, o sistema deverá sugerir automaticamente uma categoria.
+
+Exemplos:
+
+Mercadona → Alimentação
+
+Steam → Entretenimento
+
+Galp → Combustível
+
+Fnac → Tecnologia
+
+---
+
+## Recomendações Inteligentes
+
+Com base nos hábitos do utilizador, o sistema deverá gerar recomendações.
+
+Exemplos:
+
+* "Este mês gastou mais 18% em restaurantes."
+* "O orçamento de alimentação encontra-se quase esgotado."
+* "Tem capacidade para aumentar a sua poupança mensal."
+
+---
+
+## Previsão Financeira
+
+Com base no histórico financeiro, o sistema deverá prever:
+
+* saldo esperado no final do mês;
+* despesas previstas;
+* categoria com maior probabilidade de crescimento;
+* evolução da poupança.
+
+---
+
+# 5. Requisitos Não Funcionais
+
+O sistema deverá cumprir os seguintes requisitos:
+
+* interface intuitiva;
+* elevada usabilidade;
+* arquitetura modular;
+* código reutilizável;
+* design responsivo;
+* elevada performance;
+* compatibilidade com os principais navegadores;
+* segurança dos dados;
+* autenticação segura;
+* escalabilidade.
+
+---
+
+# 6. Arquitetura Tecnológica
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* React Router
+* TanStack Query
+* Zustand
+
+---
+
+## Backend
+
+* Node.js
+* Express
+* Prisma ORM
+
+---
+
+## Base de Dados
+
+* PostgreSQL (Neon)
+
+---
+
+## Autenticação
+
+* JWT
+* Refresh Tokens
+* Bcrypt
+
+---
+
+## Armazenamento
+
+* Cloudinary (comprovativos)
+
+---
+
+## Inteligência Artificial
+
+* OpenAI API ou Google Gemini
+
+---
+
+## Bibliotecas
+
+* Recharts
+* React Hook Form
+* Zod
+* Axios
+* Framer Motion
+* React Hot Toast
+
+---
+
+# 7. Roadmap de Desenvolvimento
+
+## Versão 1.0
+
+* Sistema de autenticação.
+* Gestão de contas.
+* Gestão de categorias.
+* Gestão de receitas.
+* Gestão de despesas.
+* Dashboard.
+* Orçamentos.
+* Objetivos financeiros.
+* Estatísticas.
+* Gráficos.
+
+---
+
+## Versão 2.0
+
+* OCR de faturas.
+* Upload de comprovativos.
+* Despesas recorrentes.
+* Notificações.
+* Pesquisa avançada.
+* Tags.
+* Exportação CSV/PDF.
+
+---
+
+## Versão 3.0
+
+* Inteligência Artificial.
+* Classificação automática.
+* Previsão de gastos.
+* Recomendações financeiras.
+* Saúde financeira (Financial Score).
+* Dashboard personalizado.
+
+---
+
+# 8. Critérios de Qualidade
+
+O projeto será considerado concluído quando cumprir os seguintes critérios:
+
+* Interface moderna e consistente.
+* Arquitetura limpa e modular.
+* Base de dados normalizada.
+* API REST documentada.
+* Código organizado e reutilizável.
+* Cobertura dos requisitos funcionais.
+* Elevada responsividade.
+* Elevada performance.
+* Tratamento adequado de erros.
+* Documentação técnica completa.
+* Deploy público da aplicação.
+
+---
+
+# 9. Evolução Futura
+
+O WalletWise foi concebido como uma plataforma evolutiva, permitindo a integração futura de funcionalidades mais avançadas sem necessidade de alterações profundas na arquitetura.
+
+Entre as funcionalidades previstas encontram-se:
+
+* sincronização bancária através de Open Banking;
+* aplicação móvel desenvolvida em Flutter;
+* sistema multiutilizador para gestão financeira familiar;
+* gestão de investimentos;
+* gestão de empréstimos;
+* gestão de cartões de crédito;
+* relatórios financeiros avançados;
+* exportação para Excel e PDF;
+* dashboard analítico com Business Intelligence;
+* assistente financeiro baseado em Inteligência Artificial;
+* sistema de gamificação com conquistas e níveis;
+* comparação de hábitos financeiros ao longo do tempo;
+* integração com calendários para lembretes automáticos de pagamentos.
+
+A arquitetura da aplicação deverá ser preparada desde o início para acomodar estas evoluções, garantindo escalabilidade, manutenibilidade e facilidade de extensão ao longo do ciclo de vida do projeto.
